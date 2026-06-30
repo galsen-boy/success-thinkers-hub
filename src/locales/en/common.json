@@ -1,0 +1,371 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "partners": "Partners",
+    "contact": "Contact",
+    "audit": "Free audit"
+  },
+  "language": { "switch": "Language", "en": "English", "fr": "Français" },
+  "footer": {
+    "tagline": "Durable, resilient enterprise architectures — Oracle, Microsoft & Red Hat. For banks, telecoms, governments and large construction / energy corporations.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "address": "Ouest Foire lot 12805, Yoff, Dakar",
+    "rights": "All rights reserved.",
+    "ceo": "Pape DIENG — CEO & Founder · Oracle IT Consultant Expert",
+    "slogan": "Design, build and deploy"
+  },
+  "home": {
+    "meta": {
+      "title": "SUCCESS Thinkers — 100% Uptime, 0% Downtime",
+      "description": "Mission-critical Oracle, Microsoft & Red Hat architectures for banks, telecoms and governments."
+    },
+    "hero": {
+      "badge": "Mission-critical infrastructure",
+      "title1": "100% UPTIME.",
+      "title2": "0% DOWNTIME.",
+      "subtitle": "Operational certainty for your mission-critical infrastructure. SUCCESS Thinkers designs, secures and deploys durable and resilient enterprise architectures built on Oracle, Microsoft and Red Hat.",
+      "cta1": "Request a free audit",
+      "cta2": "Explore our platform"
+    },
+    "stats": [
+      { "value": "15+", "label": "Years of Oracle expertise" },
+      { "value": "50+", "label": "Projects delivered" },
+      { "value": "09", "label": "Critical sectors" },
+      { "value": "24/7", "label": "Availability" }
+    ],
+    "tabs": {
+      "eyebrow": "Policy & Capabilities",
+      "title": "Structured, proven, operational expertise.",
+      "tech": {
+        "title": "Technologies",
+        "items": [
+          "Oracle Database, RAC, ASM, Exadata, ODA",
+          "Microsoft SQL Server, Azure, Power BI",
+          "Red Hat Enterprise Linux & virtualization",
+          "OCI and Azure Cloud (hybrid / multi-cloud)",
+          "Multi-platform application development"
+        ]
+      },
+      "partners": {
+        "title": "Partnerships",
+        "items": [
+          "Banks & financial institutions",
+          "Telecom operators",
+          "Social networks & platforms",
+          "Mobile Money & money transfer",
+          "Construction, energy & public services"
+        ]
+      },
+      "sec": {
+        "title": "Security & Networking",
+        "items": [
+          "Offensive and defensive cybersecurity",
+          "Securing critical infrastructure",
+          "Access control AD / LDAP / SSO",
+          "Audit, hardening and compliance",
+          "Network architecture, DMZ, segmentation"
+        ]
+      },
+      "company": {
+        "title": "SUCCESS Thinkers Company",
+        "items": [
+          "ITIL & ISO compliance",
+          "Rigorous on-time delivery",
+          "Teams of certified expert engineers",
+          "Value-driven Agile methodology",
+          "Operational results commitment"
+        ]
+      }
+    },
+    "personas": {
+      "eyebrow": "Our approach",
+      "title": "Two languages, one execution standard.",
+      "subtitle": "We speak both business and engineering. Every deliverable addresses economic value and technical robustness at the same time.",
+      "deciders": {
+        "title": "For Decision-Makers",
+        "audience": "(CEO / CFO)",
+        "items": [
+          "Structural reduction of IT operating costs",
+          "Real-time Oracle Analytics & Power BI dashboards",
+          "OHADA compliance and regulatory reporting",
+          "ROI measurable from the first fiscal year"
+        ]
+      },
+      "tech": {
+        "title": "For Technical Leadership",
+        "audience": "(CIO / SecOps)",
+        "items": [
+          "Oracle RAC / ASM high availability",
+          "SGD security and infrastructure hardening",
+          "Multi-site architecture with automatic failover",
+          "Proactive monitoring via Enterprise Manager Cloud Control"
+        ]
+      }
+    },
+    "ctaBand": {
+      "title": "Secure your critical operations in less than 30 days.",
+      "subtitle": "A free audit run by our certified Oracle engineers. Diagnostic, action plan and roadmap.",
+      "btn": "Schedule the audit"
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Services — SUCCESS Thinkers",
+      "description": "Management, IT governance, security and R&D. Oracle, Microsoft and application platform stack."
+    },
+    "hero": {
+      "eyebrow": "Services",
+      "title1": "Our areas of expertise.",
+      "title2": "From governance to deployment.",
+      "subtitle": "End-to-end engineering covering management, IT governance, security and R&D."
+    },
+    "quadrants": [
+      {
+        "title": "Enterprise management",
+        "items": [
+          "Policy steering and governance",
+          "OHADA accounting",
+          "Agile & ITIL project management",
+          "Change management",
+          "ERP implementation"
+        ]
+      },
+      {
+        "title": "IT systems governance",
+        "items": [
+          "Datacenter design and construction",
+          "Database administration",
+          "API federation",
+          "Migrations and upgrades",
+          "Virtualization & bare metal"
+        ]
+      },
+      {
+        "title": "Systems security",
+        "items": [
+          "Oracle SGD, AD / LDAP & federation",
+          "SSL / TLS certificates, SSO",
+          "DMZ, firewalls, segmentation",
+          "Bandwidth sizing",
+          "Audits & remediation"
+        ]
+      },
+      {
+        "title": "Research and development",
+        "items": [
+          "Custom web & mobile applications",
+          "Big Data NoSQL",
+          "Performance optimization",
+          "Microservices architecture",
+          "Continuous integration / DevOps"
+        ]
+      }
+    ],
+    "stack": {
+      "eyebrow": "Technical stack",
+      "title": "Three mastered technology pillars.",
+      "oracle": "Oracle (Cloud & On-Prem)",
+      "microsoft": "Microsoft (Azure & On-Prem)",
+      "platform": "Platform & applications"
+    },
+    "sgd": {
+      "eyebrow": "Interactive architecture",
+      "title": "Oracle SGD — authorization and federation flow",
+      "devices": "Devices",
+      "devicesSub": "Workstations & mobile",
+      "ad": "Active Directory / LDAP",
+      "adSub": "Authentication",
+      "gw1": "SGD Gateway 1",
+      "gw2": "SGD Gateway 2",
+      "cluster": "SGD Cluster Array",
+      "server1": "Server 1",
+      "server2": "Server 2",
+      "erp": "ERP",
+      "erpSub": "Production",
+      "bi": "BI",
+      "biSub": "Analytics",
+      "dmz": "Web DMZ zone",
+      "dmzSub": "Exposure"
+    },
+    "ged": {
+      "title": "GED Webcenter Content — document workflow",
+      "auth": "AD Authentication",
+      "authSub": "SSO",
+      "adf": "ADF Validation",
+      "adfSub": "Workflow",
+      "inst1": "GED Weblogic — Inst. 1",
+      "inst2": "GED Weblogic — Inst. 2",
+      "backup": "DB Backup",
+      "backupSub": "Secure archiving"
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Projects — SUCCESS Thinkers",
+      "description": "Success Accounting, Success Workers, Success Printing: our proprietary products."
+    },
+    "hero": {
+      "eyebrow": "Proprietary projects",
+      "title1": "Three platforms",
+      "title2": "designed, secured, deployed.",
+      "subtitle": "Proprietary products running in production, built for African business challenges."
+    },
+    "accounting": {
+      "label": "Product · Fintech",
+      "name": "Success Accounting",
+      "slogan": "Real-time financial interoperability. Zero manual processing.",
+      "features": [
+        "Native OHADA compliance",
+        "Real-time bidirectional bank data transfer",
+        "Automated bank reconciliation",
+        "Full audit trail and cryptographic signatures"
+      ],
+      "dashboard": "Financial dashboard",
+      "period": "Q2 — Current fiscal year",
+      "kpis": [
+        { "l": "Transactions", "v": "32,900", "d": "+12.4%" },
+        { "l": "Consolidated balance", "v": "$17.9M", "d": "+8.1%" },
+        { "l": "Discrepancies", "v": "15", "d": "-67%" }
+      ],
+      "series": { "tx": "Transactions", "balance": "Balance ($k)", "gap": "Discrepancies" }
+    },
+    "workers": {
+      "label": "Product · Construction",
+      "name": "Success Workers",
+      "slogan": "Optimize operational human capital on your construction sites.",
+      "features": [
+        "Real-time construction site tracking",
+        "Geolocated worker matching",
+        "Mitigating youth unemployment in Senegal",
+        "Monetization via transaction tax"
+      ],
+      "mapTitle": "Operational map — Senegal",
+      "summary": "{{sites}} sites · {{workers}} active workers",
+      "statusActive": "Active",
+      "statusHiring": "Hiring",
+      "workersLabel": "workers",
+      "siteWorkers": "Workers",
+      "siteStatus": "Status",
+      "siteProductivity": "Productivity"
+    },
+    "printing": {
+      "label": "Product · Private security",
+      "name": "Success Printing",
+      "slogan": "Private security: biometric traceability and emergency response.",
+      "features": [
+        "Automated biometric fingerprint sign-in",
+        "Real-time guard GPS tracking",
+        "Instant burglary alerts",
+        "Salary payments via Mobile Money"
+      ],
+      "console": "Supervisor console",
+      "agents": "5 guards · Dakar zone",
+      "trigger": "Trigger alert",
+      "stop": "Stop alert",
+      "statusActive": "Active",
+      "statusPatrol": "On patrol",
+      "statusIncident": "Incident",
+      "alertMsg": "Burglary alert triggered — response teams notified."
+    }
+  },
+  "partners": {
+    "meta": {
+      "title": "Partners & Organization — SUCCESS Thinkers",
+      "description": "Our organization chart, our Oracle, IBM, DELL, HP partnerships."
+    },
+    "hero": {
+      "eyebrow": "Partners & Organization",
+      "title1": "Partnerships built",
+      "title2": "on trust and expertise."
+    },
+    "org": {
+      "title": "SUCCESS Thinkers Group organization chart",
+      "subtitle": "Click on a department to explore its composition.",
+      "ceoRole": "CEO & Founder",
+      "nodes": [
+        { "name": "Secretariat & Reception", "role": "5 staff" },
+        { "name": "Executive Council", "role": "6 members" },
+        { "name": "Technical Division", "role": "50+ IT engineers" },
+        { "name": "HR & Operations", "role": "10+ staff" },
+        { "name": "Sales & Marketing", "role": "5 staff" },
+        { "name": "Finance & Accounting (DFC)", "role": "7 staff" }
+      ]
+    },
+    "appliances": {
+      "eyebrow": "Hardware catalog",
+      "title": "Oracle appliances we distribute",
+      "subtitle": "Certified hardware solutions delivered and maintained by SUCCESS Thinkers.",
+      "items": [
+        {
+          "name": "Exadata Database Machine",
+          "tagline": "Nanosecond flash memory",
+          "desc": "Extreme performance for mission-critical Oracle databases. Ideal for data warehouses and intensive OLTP."
+        },
+        {
+          "name": "Oracle Database Appliance — ODA X7-HA",
+          "tagline": "Affordable multi-node",
+          "desc": "High-end banking server for SMBs. Multi-node architecture at controlled cost."
+        },
+        {
+          "name": "Oracle MiniCluster S7-2",
+          "tagline": "PCI-DSS / STIG security processor",
+          "desc": "Designed for payments and Mobile Money. Regulatory compliance native at the silicon level."
+        }
+      ],
+      "hwPartnersTitle": "Complementary commercial partnerships",
+      "hwPartnersSub": "Servers and infrastructure certified by our teams."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact — SUCCESS Thinkers",
+      "description": "Request a free audit. Ouest Foire, Yoff, Dakar — Senegal."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title1": "Let's talk about your",
+      "title2": "critical infrastructure.",
+      "subtitle": "Free audit run by our certified Oracle engineers. Response within 24 business hours."
+    },
+    "form": {
+      "title": "Request form",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Professional email",
+      "company": "Company",
+      "sector": "Industry",
+      "sectorPlaceholder": "— Select —",
+      "infra": "Infrastructure type",
+      "infraPlaceholder": "e.g. Oracle RAC, on-prem datacenter, hybrid OCI…",
+      "message": "Message",
+      "messagePlaceholder": "Describe your needs, constraints and timeline.",
+      "submit": "Send request",
+      "sentTitle": "Request sent",
+      "sentBody": "Thank you. A consultant will contact you within 24 business hours.",
+      "again": "Send another request",
+      "sectors": ["Bank / Fintech", "Telecoms", "Public sector", "Construction", "Energy"],
+      "errors": {
+        "firstName": "First name required",
+        "lastName": "Last name required",
+        "email": "Invalid email",
+        "company": "Company required",
+        "sector": "Industry required",
+        "infra": "Infrastructure type required",
+        "message": "Message too short"
+      }
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "addressValue": "Ouest Foire lot 12805, next to Banque Agricole, Yoff Dakar, Senegal",
+      "hours": "Hours",
+      "hoursValue": "Mon — Fri · 8:30 AM – 6:00 PM (GMT)",
+      "office": "Main office — Yoff",
+      "openMap": "Open map"
+    }
+  }
+}

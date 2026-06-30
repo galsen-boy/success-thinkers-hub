@@ -8,8 +8,10 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 
 import appCss from "../styles.css?url";
+import "../i18n";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -19,13 +21,13 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-black px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-gradient-signal">404</h1>
-        <h2 className="mt-4 text-xl font-semibold">Page introuvable</h2>
+        <h2 className="mt-4 text-xl font-semibold">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Cette ressource n'existe pas ou a été déplacée.
+          This resource does not exist or has been moved.
         </p>
         <div className="mt-6">
           <Link to="/" className="inline-flex items-center justify-center rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f]">
-            Retour à l'accueil
+            Back to home
           </Link>
         </div>
       </div>
@@ -43,19 +45,19 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-black px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight">Une erreur est survenue</h1>
+        <h1 className="text-xl font-semibold tracking-tight">An error occurred</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Veuillez rafraîchir ou revenir à l'accueil.
+          Please refresh or return to the homepage.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => { router.invalidate(); reset(); }}
             className="rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f]"
           >
-            Réessayer
+            Retry
           </button>
           <a href="/" className="rounded-md border border-border bg-carbon px-4 py-2 text-sm font-medium hover:bg-muted">
-            Accueil
+            Home
           </a>
         </div>
       </div>
@@ -98,10 +100,21 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function HtmlLangSync() {
+  const { i18n } = useTranslation();
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = i18n.resolvedLanguage || "fr";
+    }
+  }, [i18n.resolvedLanguage]);
+  return null;
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <HtmlLangSync />
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">
