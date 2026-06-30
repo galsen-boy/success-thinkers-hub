@@ -1,0 +1,371 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "projects": "Projets",
+    "partners": "Partenaires",
+    "contact": "Contact",
+    "audit": "Audit gratuit"
+  },
+  "language": { "switch": "Langue", "en": "English", "fr": "Français" },
+  "footer": {
+    "tagline": "Architectures d'entreprise durables et résilientes — Oracle, Microsoft & Red Hat. Pour les banques, télécoms, gouvernements et grandes corporations BTP / Énergie.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "address": "Ouest foire lot 12805, Yoff, Dakar",
+    "rights": "Tous droits réservés.",
+    "ceo": "Pape DIENG — Directeur Général & Fondateur · Oracle IT Consultant Expert",
+    "slogan": "Design, build and deploy"
+  },
+  "home": {
+    "meta": {
+      "title": "SUCCESS Thinkers — 100% Disponibilité, 0% Interruption",
+      "description": "Architectures critiques Oracle, Microsoft & Red Hat pour banques, télécoms et gouvernements."
+    },
+    "hero": {
+      "badge": "Infrastructure critique",
+      "title1": "100% DISPONIBILITÉ.",
+      "title2": "0% INTERRUPTION.",
+      "subtitle": "La certitude opérationnelle pour vos infrastructures critiques. SUCCESS Thinkers conçoit, sécurise et déploie des architectures d'entreprise durables et résilientes basées sur Oracle, Microsoft et Red Hat.",
+      "cta1": "Demander un audit gratuit",
+      "cta2": "Découvrir notre plateforme"
+    },
+    "stats": [
+      { "value": "15+", "label": "Années d'expertise Oracle" },
+      { "value": "50+", "label": "Projets délivrés" },
+      { "value": "09", "label": "Secteurs critiques" },
+      { "value": "24/7", "label": "Disponibilité" }
+    ],
+    "tabs": {
+      "eyebrow": "Politique & Compétences",
+      "title": "Une expertise structurée, prouvée, opérationnelle.",
+      "tech": {
+        "title": "Technologies",
+        "items": [
+          "Oracle Database, RAC, ASM, Exadata, ODA",
+          "Microsoft SQL Server, Azure, Power BI",
+          "Red Hat Enterprise Linux & virtualisation",
+          "Cloud OCI et Azure (hybride / multi-cloud)",
+          "Développement applicatif multi-plateforme"
+        ]
+      },
+      "partners": {
+        "title": "Partenariats",
+        "items": [
+          "Banques & institutions financières",
+          "Opérateurs Télécoms",
+          "Réseaux sociaux & plateformes",
+          "Mobile Money & transfert d'argent",
+          "BTP, Énergie & services publics"
+        ]
+      },
+      "sec": {
+        "title": "Sécurité & Networking",
+        "items": [
+          "Cybersécurité offensive et défensive",
+          "Sécurisation des infrastructures critiques",
+          "Contrôle d'accès AD / LDAP / SSO",
+          "Audit, durcissement et conformité",
+          "Architecture réseau, DMZ, segmentation"
+        ]
+      },
+      "company": {
+        "title": "Entreprise SUCCESS Thinkers",
+        "items": [
+          "Conformité ITIL & ISO",
+          "Exécution rigoureuse dans les délais",
+          "Équipes d'ingénieurs experts certifiés",
+          "Méthodologie Agile pilotée par la valeur",
+          "Engagement de résultat opérationnel"
+        ]
+      }
+    },
+    "personas": {
+      "eyebrow": "Notre approche",
+      "title": "Deux langages, une même rigueur d'exécution.",
+      "subtitle": "Nous parlons à la fois la langue du business et celle de l'ingénierie. Chaque livrable adresse simultanément la valeur économique et la robustesse technique.",
+      "deciders": {
+        "title": "Pour les Décideurs",
+        "audience": "(CEO / CFO)",
+        "items": [
+          "Réduction structurelle des coûts d'exploitation IT",
+          "Tableaux de bord Oracle Analytics & Power BI temps réel",
+          "Conformité OHADA et reporting réglementaire",
+          "ROI mesurable dès le premier exercice"
+        ]
+      },
+      "tech": {
+        "title": "Pour les Directions Techniques",
+        "audience": "(DSI / SecOps)",
+        "items": [
+          "Haute disponibilité Oracle RAC / ASM",
+          "Sécurité SGD et durcissement infrastructure",
+          "Architecture multi-site avec failover automatique",
+          "Supervision proactive via Enterprise Manager Cloud Control"
+        ]
+      }
+    },
+    "ctaBand": {
+      "title": "Sécurisez vos opérations critiques en moins de 30 jours.",
+      "subtitle": "Un audit gratuit conduit par nos ingénieurs Oracle certifiés. Diagnostic, plan d'action et roadmap.",
+      "btn": "Planifier l'audit"
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Services — SUCCESS Thinkers",
+      "description": "Management, gouvernance IT, sécurité et R&D. Stack Oracle, Microsoft et plateformes applicatives."
+    },
+    "hero": {
+      "eyebrow": "Services",
+      "title1": "Nos domaines d'expertise.",
+      "title2": "De la gouvernance au déploiement.",
+      "subtitle": "Une ingénierie complète couvrant le management, la gouvernance IT, la sécurité et la R&D."
+    },
+    "quadrants": [
+      {
+        "title": "Management des entreprises",
+        "items": [
+          "Pilotage des politiques et gouvernance",
+          "Comptabilité OHADA",
+          "Gestion de projets Agile & ITIL",
+          "Conduite du changement",
+          "Mise en œuvre ERP"
+        ]
+      },
+      {
+        "title": "Gouvernance des systèmes informatiques",
+        "items": [
+          "Design et construction de Datacenter",
+          "Administration de bases de données",
+          "Fédération d'API",
+          "Migrations et upgrade",
+          "Virtualisation & bare metal"
+        ]
+      },
+      {
+        "title": "Sécurité des systèmes",
+        "items": [
+          "Oracle SGD, AD / LDAP & fédération",
+          "Certificats SSL / TLS, SSO",
+          "DMZ, firewalls, segmentation",
+          "Dimensionnement bande passante",
+          "Audits & remédiation"
+        ]
+      },
+      {
+        "title": "Recherche et développement",
+        "items": [
+          "Applications web & mobile sur mesure",
+          "Big Data NoSQL",
+          "Optimisation de performance",
+          "Architecture micro-services",
+          "Intégration continue / DevOps"
+        ]
+      }
+    ],
+    "stack": {
+      "eyebrow": "Stack technique",
+      "title": "Trois piliers technologiques maîtrisés.",
+      "oracle": "Oracle (Cloud & Local)",
+      "microsoft": "Microsoft (Azure & Local)",
+      "platform": "Plateforme & applications"
+    },
+    "sgd": {
+      "eyebrow": "Architecture interactive",
+      "title": "Oracle SGD — flux d'autorisation et de fédération",
+      "devices": "Devices",
+      "devicesSub": "Postes & mobiles",
+      "ad": "Active Directory / LDAP",
+      "adSub": "Authentification",
+      "gw1": "Passerelle SGD 1",
+      "gw2": "Passerelle SGD 2",
+      "cluster": "Cluster Array SGD",
+      "server1": "Serveur 1",
+      "server2": "Serveur 2",
+      "erp": "ERP",
+      "erpSub": "Production",
+      "bi": "BI",
+      "biSub": "Décisionnel",
+      "dmz": "Web zone DMZ",
+      "dmzSub": "Exposition"
+    },
+    "ged": {
+      "title": "GED Webcenter Content — workflow documentaire",
+      "auth": "AD Authentication",
+      "authSub": "SSO",
+      "adf": "Validation ADF",
+      "adfSub": "Workflow",
+      "inst1": "GED Weblogic — Inst. 1",
+      "inst2": "GED Weblogic — Inst. 2",
+      "backup": "DB Backup",
+      "backupSub": "Archivage sécurisé"
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Projets — SUCCESS Thinkers",
+      "description": "Success Accounting, Success Workers, Success Printing : nos produits propriétaires."
+    },
+    "hero": {
+      "eyebrow": "Projets propriétaires",
+      "title1": "Trois plateformes",
+      "title2": "conçues, sécurisées, déployées.",
+      "subtitle": "Des produits propriétaires opérationnels en production, taillés pour les enjeux africains."
+    },
+    "accounting": {
+      "label": "Produit · Fintech",
+      "name": "Success Accounting",
+      "slogan": "L'interopérabilité financière temps réel. Zéro traitement manuel.",
+      "features": [
+        "Conformité OHADA native",
+        "Transfert bidirectionnel temps réel avec les banques",
+        "Réconciliation bancaire automatisée",
+        "Audit trail complet et signatures cryptographiques"
+      ],
+      "dashboard": "Tableau de bord financier",
+      "period": "Q2 — Exercice en cours",
+      "kpis": [
+        { "l": "Transactions", "v": "32 900", "d": "+12,4%" },
+        { "l": "Solde consolidé", "v": "17,9 M$", "d": "+8,1%" },
+        { "l": "Écarts détectés", "v": "15", "d": "-67%" }
+      ],
+      "series": { "tx": "Transactions", "balance": "Solde (k$)", "gap": "Écarts" }
+    },
+    "workers": {
+      "label": "Produit · BTP",
+      "name": "Success Workers",
+      "slogan": "Optimiser le capital humain opérationnel sur vos chantiers BTP.",
+      "features": [
+        "Suivi temps réel des chantiers",
+        "Mise en relation géolocalisée des ouvriers",
+        "Lutte contre le chômage des jeunes au Sénégal",
+        "Monétisation via taxe transactionnelle"
+      ],
+      "mapTitle": "Carte opérationnelle — Sénégal",
+      "summary": "{{sites}} chantiers · {{workers}} ouvriers actifs",
+      "statusActive": "Actif",
+      "statusHiring": "Recrutement",
+      "workersLabel": "ouvriers",
+      "siteWorkers": "Ouvriers",
+      "siteStatus": "Statut",
+      "siteProductivity": "Productivité"
+    },
+    "printing": {
+      "label": "Produit · Sécurité privée",
+      "name": "Success Printing",
+      "slogan": "Sécurité privée : traçabilité biométrique et réactivité d'urgence.",
+      "features": [
+        "Pointage biométrique automatisé (empreintes)",
+        "Géolocalisation temps réel des agents",
+        "Alertes anti-cambriolage instantanées",
+        "Versement des salaires via Mobile Money"
+      ],
+      "console": "Console superviseur",
+      "agents": "5 agents · zone Dakar",
+      "trigger": "Déclencher alerte",
+      "stop": "Arrêter l'alerte",
+      "statusActive": "Actif",
+      "statusPatrol": "En patrouille",
+      "statusIncident": "Incident",
+      "alertMsg": "Alerte cambriolage déclenchée — équipes d'intervention notifiées."
+    }
+  },
+  "partners": {
+    "meta": {
+      "title": "Partenaires & Organisation — SUCCESS Thinkers",
+      "description": "Notre organigramme, nos partenariats Oracle, IBM, DELL, HP."
+    },
+    "hero": {
+      "eyebrow": "Partenaires & Organisation",
+      "title1": "Des partenariats bâtis",
+      "title2": "sur la confiance et l'expertise."
+    },
+    "org": {
+      "title": "Organigramme du Groupe SUCCESS Thinkers",
+      "subtitle": "Cliquez sur un département pour explorer sa composition.",
+      "ceoRole": "Directeur Général & Fondateur",
+      "nodes": [
+        { "name": "Secrétariat & Accueil", "role": "5 personnel" },
+        { "name": "Conseil Exécutif", "role": "6 membres" },
+        { "name": "Direction Technique", "role": "50+ ingénieurs IT" },
+        { "name": "Direction RH & Gestion", "role": "10+ collaborateurs" },
+        { "name": "Direction Commerciale & Marketing", "role": "5 collaborateurs" },
+        { "name": "Direction Finance & Comptabilité (DFC)", "role": "7 collaborateurs" }
+      ]
+    },
+    "appliances": {
+      "eyebrow": "Catalogue Hardware",
+      "title": "Oracle Appliances commercialisés",
+      "subtitle": "Solutions matérielles certifiées, livrées et maintenues par SUCCESS Thinkers.",
+      "items": [
+        {
+          "name": "Exadata Database Machine",
+          "tagline": "Mémoire flash nanoseconde",
+          "desc": "Performance extrême pour bases Oracle critiques. Idéale pour datawarehouses et OLTP intensifs."
+        },
+        {
+          "name": "Oracle Database Appliance — ODA X7-HA",
+          "tagline": "Multi-nœud abordable",
+          "desc": "Serveur bancaire haut de gamme pour PME/ETI. Architecture multi-nœud à coût maîtrisé."
+        },
+        {
+          "name": "Oracle MiniCluster S7-2",
+          "tagline": "Processeur sécurité PCI-DSS / STIG",
+          "desc": "Conçu pour paiements et Mobile Money. Conformité réglementaire native au niveau du silicium."
+        }
+      ],
+      "hwPartnersTitle": "Partenariats commerciaux complémentaires",
+      "hwPartnersSub": "Serveurs et infrastructures certifiés par nos équipes."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact — SUCCESS Thinkers",
+      "description": "Demandez un audit gratuit. Ouest Foire, Yoff, Dakar — Sénégal."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title1": "Parlons de votre",
+      "title2": "infrastructure critique.",
+      "subtitle": "Audit gratuit conduit par nos ingénieurs Oracle certifiés. Réponse sous 24h ouvrées."
+    },
+    "form": {
+      "title": "Formulaire de demande",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email professionnel",
+      "company": "Entreprise",
+      "sector": "Secteur d'activité",
+      "sectorPlaceholder": "— Sélectionner —",
+      "infra": "Type d'infrastructure",
+      "infraPlaceholder": "Ex : Oracle RAC, datacenter on-prem, hybrid OCI…",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre besoin, vos contraintes et vos délais.",
+      "submit": "Envoyer la demande",
+      "sentTitle": "Demande transmise",
+      "sentBody": "Merci. Un consultant prendra contact avec vous sous 24h ouvrées.",
+      "again": "Envoyer une autre demande",
+      "sectors": ["Banque / Fintech", "Télécoms", "Secteur Public", "BTP", "Énergie"],
+      "errors": {
+        "firstName": "Prénom requis",
+        "lastName": "Nom requis",
+        "email": "Email invalide",
+        "company": "Entreprise requise",
+        "sector": "Secteur requis",
+        "infra": "Type d'infrastructure requis",
+        "message": "Message trop court"
+      }
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "addressValue": "Ouest foire lot 12805, côté Banque Agricole, Yoff Dakar, Sénégal",
+      "hours": "Horaires",
+      "hoursValue": "Lun — Ven · 08h30 – 18h00 (GMT)",
+      "office": "Bureau principal — Yoff",
+      "openMap": "Ouvrir la carte"
+    }
+  }
+}
