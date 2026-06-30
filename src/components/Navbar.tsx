@@ -1,17 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Menu, X, Zap } from "lucide-react";
-
-const links = [
-  { to: "/", label: "Accueil" },
-  { to: "/services", label: "Services" },
-  { to: "/projets", label: "Projets" },
-  { to: "/partenaires", label: "Partenaires" },
-  { to: "/contact", label: "Contact" },
-] as const;
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
+  const links = [
+    { to: "/", label: t("nav.home") },
+    { to: "/services", label: t("nav.services") },
+    { to: "/projets", label: t("nav.projects") },
+    { to: "/partenaires", label: t("nav.partners") },
+    { to: "/contact", label: t("nav.contact") },
+  ] as const;
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-black/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
@@ -50,20 +53,26 @@ export function Navbar() {
           ))}
         </nav>
 
-        <Link
-          to="/contact"
-          className="hidden md:inline-flex items-center rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f] transition-colors"
-        >
-          Audit gratuit
-        </Link>
+        <div className="hidden md:flex items-center gap-3">
+          <LanguageSwitcher />
+          <Link
+            to="/contact"
+            className="inline-flex items-center rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f] transition-colors"
+          >
+            {t("nav.audit")}
+          </Link>
+        </div>
 
-        <button
-          aria-label="Menu"
-          onClick={() => setOpen((o) => !o)}
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-foreground"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSwitcher compact />
+          <button
+            aria-label="Menu"
+            onClick={() => setOpen((o) => !o)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border text-foreground"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
       {open && (
         <div className="md:hidden border-t border-border bg-black">
@@ -85,7 +94,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-[#E50914] px-3 py-3 text-center text-sm font-semibold text-white"
             >
-              Audit gratuit
+              {t("nav.audit")}
             </Link>
           </nav>
         </div>
