@@ -10,6 +10,7 @@ import {
   ShieldCheck, CircleDot, CheckCircle2, Building2,
 } from "lucide-react";
 import { useDocumentMeta } from "../hooks/use-document-title";
+import { useIsDark } from "../hooks/use-is-dark";
 
 export const Route = createFileRoute("/projets")({
   component: ProjectsPage,
@@ -64,6 +65,11 @@ function ProjectsPage() {
 
 function SuccessAccounting() {
   const { t } = useTranslation();
+  const isDark = useIsDark();
+  const grid = isDark ? "#222" : "#E2E8F0";
+  const axis = isDark ? "#9CA3AF" : "#475569";
+  const tooltipBg = isDark ? "#0a0a0a" : "#ffffff";
+  const tooltipText = isDark ? "#F1F5F9" : "#0F172A";
   const features = t("projects.accounting.features", { returnObjects: true }) as string[];
   const kpis = t("projects.accounting.kpis", { returnObjects: true }) as { l: string; v: string; d: string }[];
   return (
@@ -116,13 +122,13 @@ function SuccessAccounting() {
             <div className="mt-6 h-56">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={accountingData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#222" />
-                  <XAxis dataKey="m" stroke="#9CA3AF" fontSize={11} />
-                  <YAxis stroke="#9CA3AF" fontSize={11} />
-                  <Tooltip contentStyle={{ background: "#0a0a0a", border: "1px solid #E50914", borderRadius: 8, fontSize: 12 }} />
-                  <Legend wrapperStyle={{ fontSize: 11, color: "#9CA3AF" }} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={grid} />
+                  <XAxis dataKey="m" stroke={axis} fontSize={11} />
+                  <YAxis stroke={axis} fontSize={11} />
+                  <Tooltip contentStyle={{ background: tooltipBg, border: "1px solid #E50914", borderRadius: 8, fontSize: 12, color: tooltipText }} />
+                  <Legend wrapperStyle={{ fontSize: 11, color: axis }} />
                   <Line type="monotone" dataKey="tx" name={t("projects.accounting.series.tx")} stroke="#E50914" strokeWidth={2.5} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="balance" name={t("projects.accounting.series.balance")} stroke="#60A5FA" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="balance" name={t("projects.accounting.series.balance")} stroke={isDark ? "#60A5FA" : "#2563EB"} strokeWidth={2} dot={{ r: 3 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -130,10 +136,10 @@ function SuccessAccounting() {
             <div className="mt-2 h-32">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={accountingData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#222" />
-                  <XAxis dataKey="m" stroke="#9CA3AF" fontSize={11} />
-                  <YAxis stroke="#9CA3AF" fontSize={11} />
-                  <Tooltip contentStyle={{ background: "#0a0a0a", border: "1px solid #E50914", borderRadius: 8, fontSize: 12 }} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={grid} />
+                  <XAxis dataKey="m" stroke={axis} fontSize={11} />
+                  <YAxis stroke={axis} fontSize={11} />
+                  <Tooltip contentStyle={{ background: tooltipBg, border: "1px solid #E50914", borderRadius: 8, fontSize: 12, color: tooltipText }} />
                   <Bar dataKey="gap" name={t("projects.accounting.series.gap")} fill="#E50914" radius={[4,4,0,0]} />
                 </BarChart>
               </ResponsiveContainer>
@@ -286,7 +292,7 @@ function SuccessPrinting() {
               </div>
               <button onClick={() => setAlert((a) => !a)}
                 className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all ${
-                  alert ? "bg-white text-black" : "bg-[#E50914] text-white shadow-signal hover:bg-[#c2080f]"
+                  alert ? "bg-slate-900 text-white border border-white/20 dark:bg-white dark:text-black dark:border-transparent" : "bg-[#E50914] text-white shadow-signal hover:bg-[#c2080f]"
                 }`}>
                 <AlertTriangle className="h-4 w-4" />
                 {alert ? t("projects.printing.stop") : t("projects.printing.trigger")}

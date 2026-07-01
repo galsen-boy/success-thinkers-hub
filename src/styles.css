@@ -134,21 +134,39 @@
     color: #fff;
   }
 
-  /* Light-mode remap for pre-existing hardcoded dark utilities used across the app,
-     so the enterprise dark composition translates to a premium light B2B surface. */
-  html:not(.dark) .bg-black { background-color: #ffffff !important; }
-  html:not(.dark) .bg-black\/80 { background-color: rgba(255, 255, 255, 0.88) !important; backdrop-filter: blur(12px); }
-  html:not(.dark) .bg-black\/70 { background-color: rgba(255, 255, 255, 0.92) !important; }
-  html:not(.dark) .bg-black\/60 { background-color: rgba(249, 250, 251, 0.85) !important; }
-  html:not(.dark) .bg-black\/40 { background-color: rgba(249, 250, 251, 0.7) !important; }
+  /* Light-mode remaps: the app was authored dark-first with several hardcoded
+     dark utilities (bg-black, text-white, ring-black, hover:text-white).
+     Rather than rewriting every component, these scoped overrides translate
+     the composition to a premium light B2B surface while keeping red accents
+     and white icons on red chips fully readable. */
+  html:not(.dark) .bg-black { background-color: #0F172A !important; } /* small icon chips stay dark so white icons remain visible */
+  html:not(.dark) .bg-black\/80 { background-color: rgba(255, 255, 255, 0.9) !important; backdrop-filter: blur(12px); border-color: #E2E8F0; }
+  html:not(.dark) .bg-black\/70 { background-color: #ffffff !important; }
+  html:not(.dark) .bg-black\/60 { background-color: rgba(249, 250, 251, 0.9) !important; }
+  html:not(.dark) .bg-black\/40 { background-color: rgba(249, 250, 251, 0.75) !important; }
   html:not(.dark) .bg-carbon { background-color: #F9FAFB !important; }
   html:not(.dark) .ring-black { --tw-ring-color: #ffffff !important; }
-  html:not(.dark) .text-gradient-signal {
-    background: linear-gradient(90deg, #0F172A 0%, #E50914 100%) !important;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+
+  /* text-white handling: keep white when placed on a red/signal surface (buttons,
+     red chips, gradient-red bands) or on an element that explicitly overlays
+     with an SVG/icon on red. Darken it on light surfaces only. */
+  html:not(.dark) .text-white[class*="bg-black/"],
+  html:not(.dark) [class*="bg-black/"] .text-white:not([class*="bg-[#E50914]"]):not([class*="bg-gradient-red"]) {
+    color: #0F172A !important;
   }
+  html:not(.dark) .hover\:text-white:hover { color: #0F172A !important; }
+
+
+  /* Preserve emerald/amber semantic status colors but bump saturation for light bg */
+  html:not(.dark) .text-emerald-300 { color: #047857 !important; }
+  html:not(.dark) .text-emerald-400 { color: #059669 !important; }
+  html:not(.dark) .text-amber-300 { color: #b45309 !important; }
+  html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(16, 185, 129, 0.12) !important; }
+  html:not(.dark) .bg-amber-500\/20 { background-color: rgba(245, 158, 11, 0.15) !important; }
+
+  /* Map iframe: the dark theme uses invert to darken the OSM tiles; in light
+     mode we drop the invert so it renders naturally. */
+  html:not(.dark) .map-tile-invert { filter: grayscale(0.2) contrast(1.05) !important; }
 }
 
 @utility bg-hero {
@@ -170,10 +188,14 @@
   box-shadow: var(--shadow-elevated);
 }
 @utility text-gradient-signal {
-  background: linear-gradient(90deg, #ffffff 0%, #E50914 100%);
+  background-image: linear-gradient(90deg, #0F172A 0%, #E50914 100%);
+  background-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  html.dark & {
+    background-image: linear-gradient(90deg, #ffffff 0%, #E50914 100%);
+  }
 }
 @utility border-signal {
   border-color: #E50914;
