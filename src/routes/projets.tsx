@@ -10,6 +10,7 @@ import {
   ShieldCheck, CircleDot, CheckCircle2, Building2,
 } from "lucide-react";
 import { useDocumentMeta } from "../hooks/use-document-title";
+import { useIsDark } from "../hooks/use-is-dark";
 
 export const Route = createFileRoute("/projets")({
   component: ProjectsPage,
