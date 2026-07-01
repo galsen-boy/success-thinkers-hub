@@ -123,7 +123,7 @@ function ContactPage() {
               <iframe
                 title="Map Yoff Dakar"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=-17.503,-17.481,14.741,14.759&layer=mapnik&marker=14.7497,-17.4914"
-                className="absolute inset-0 w-full h-full grayscale contrast-125 invert opacity-90"
+                className="map-tile-invert absolute inset-0 w-full h-full grayscale contrast-125 invert opacity-90"
                 loading="lazy"
               />
               <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-signal/30" />
