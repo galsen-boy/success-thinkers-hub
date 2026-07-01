@@ -88,7 +88,7 @@ function Home() {
                   <span className={`flex h-9 w-9 items-center justify-center rounded-md ${isActive ? "bg-[#E50914]" : "bg-black"}`}>
                     <TIcon className="h-4 w-4 text-white" />
                   </span>
-                  <span className={`text-sm font-semibold ${isActive ? "text-white" : "text-muted-foreground group-hover:text-white"}`}>
+                  <span className={`text-sm font-semibold ${isActive ? "text-white" : "text-muted-foreground group-hover:text-foreground"}`}>
                     {t(`home.tabs.${k}.title`)}
                   </span>
                 </button>
