@@ -292,7 +292,7 @@ function SuccessPrinting() {
               </div>
               <button onClick={() => setAlert((a) => !a)}
                 className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all ${
-                  alert ? "bg-white text-black" : "bg-[#E50914] text-white shadow-signal hover:bg-[#c2080f]"
+                  alert ? "bg-slate-900 text-white border border-white/20 dark:bg-white dark:text-black dark:border-transparent" : "bg-[#E50914] text-white shadow-signal hover:bg-[#c2080f]"
                 }`}>
                 <AlertTriangle className="h-4 w-4" />
                 {alert ? t("projects.printing.stop") : t("projects.printing.trigger")}
