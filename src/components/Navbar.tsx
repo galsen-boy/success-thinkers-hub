@@ -56,6 +56,7 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <LanguageSwitcher />
+          <ThemeToggle />
           <Link
             to="/contact"
             className="inline-flex items-center rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f] transition-colors"
