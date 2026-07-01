@@ -43,52 +43,76 @@
 :root {
   --radius: 0.5rem;
 
-  /* Brand: Black + Carbon + Signal Red */
-  --background: oklch(0 0 0);                    /* #000000 */
-  --foreground: oklch(0.92 0 0);                 /* near-white */
-  --carbon: oklch(0.18 0 0);                     /* #161616 */
+  /* LIGHT theme (default when .dark is absent) — premium B2B */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.19 0.02 265);
+  --carbon: oklch(0.97 0.005 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.19 0.02 265);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.19 0.02 265);
+  --primary: oklch(0.62 0.24 27);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.96 0.005 260);
+  --secondary-foreground: oklch(0.19 0.02 265);
+  --muted: oklch(0.96 0.005 260);
+  --muted-foreground: oklch(0.44 0.02 265);
+  --accent: oklch(0.96 0.005 260);
+  --accent-foreground: oklch(0.19 0.02 265);
+  --destructive: oklch(0.6 0.24 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.008 260);
+  --input: oklch(0.94 0.008 260);
+  --ring: oklch(0.62 0.24 27);
+
+  --signal: oklch(0.62 0.24 27);
+  --signal-foreground: oklch(0.98 0 0);
+
+  --chart-1: oklch(0.62 0.24 27);
+  --chart-2: oklch(0.75 0.14 60);
+  --chart-3: oklch(0.6 0.14 220);
+  --chart-4: oklch(0.65 0.16 150);
+  --chart-5: oklch(0.6 0.2 320);
+
+  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #f8fafc 45%, #fee2e2 90%, #fecaca 100%);
+  --gradient-red: linear-gradient(90deg, #1f0000 0%, #E50914 100%);
+  --gradient-carbon: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  --gradient-card: linear-gradient(160deg, rgba(229,9,20,0.05) 0%, rgba(249,250,251,0.9) 60%, #ffffff 100%);
+
+  --shadow-signal: 0 10px 40px -10px rgba(229, 9, 20, 0.35);
+  --shadow-elevated: 0 20px 60px -20px rgba(15, 23, 42, 0.18);
+}
+
+.dark {
+  /* DARK theme (default site load) */
+  --background: oklch(0 0 0);
+  --foreground: oklch(0.92 0 0);
+  --carbon: oklch(0.18 0 0);
   --card: oklch(0.16 0 0);
   --card-foreground: oklch(0.94 0 0);
   --popover: oklch(0.14 0 0);
   --popover-foreground: oklch(0.94 0 0);
-  --primary: oklch(0.62 0.24 27);                /* #E50914 signal red */
-  --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.22 0 0);
   --secondary-foreground: oklch(0.94 0 0);
   --muted: oklch(0.2 0 0);
-  --muted-foreground: oklch(0.78 0 0);           /* #D1D5DB-ish (high readability) */
+  --muted-foreground: oklch(0.78 0 0);
   --accent: oklch(0.24 0 0);
   --accent-foreground: oklch(0.96 0 0);
-  --destructive: oklch(0.6 0.24 27);
-  --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.28 0 0);
   --input: oklch(0.22 0 0);
-  --ring: oklch(0.62 0.24 27);
 
-  --signal: oklch(0.62 0.24 27);                 /* #E50914 */
-  --signal-foreground: oklch(0.98 0 0);
-
-  --chart-1: oklch(0.62 0.24 27);
   --chart-2: oklch(0.78 0.16 60);
   --chart-3: oklch(0.7 0.15 200);
   --chart-4: oklch(0.78 0.18 140);
   --chart-5: oklch(0.65 0.2 320);
 
-  /* Premium gradients */
   --gradient-hero: linear-gradient(135deg, #000000 0%, #0a0a0a 45%, #2a0608 80%, #4a0404 100%);
   --gradient-red: linear-gradient(90deg, #000000 0%, #4a0404 100%);
   --gradient-carbon: linear-gradient(180deg, #0b0b0b 0%, #161616 100%);
   --gradient-card: linear-gradient(160deg, rgba(229,9,20,0.06) 0%, rgba(22,22,22,0.6) 60%, rgba(0,0,0,0.9) 100%);
 
-  /* Shadows */
   --shadow-signal: 0 10px 40px -10px rgba(229, 9, 20, 0.45);
   --shadow-elevated: 0 20px 60px -20px rgba(0, 0, 0, 0.8);
-}
-
-.dark {
-  /* Site is dark-first; .dark mirrors :root */
-  --background: oklch(0 0 0);
-  --foreground: oklch(0.92 0 0);
 }
 
 @layer base {
@@ -96,10 +120,11 @@
     border-color: var(--color-border);
   }
   html, body {
-    background-color: #000000;
+    background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    transition: background-color 300ms ease, color 300ms ease;
   }
   h1, h2, h3, h4 {
     letter-spacing: -0.02em;
@@ -107,6 +132,22 @@
   ::selection {
     background: #E50914;
     color: #fff;
+  }
+
+  /* Light-mode remap for pre-existing hardcoded dark utilities used across the app,
+     so the enterprise dark composition translates to a premium light B2B surface. */
+  html:not(.dark) .bg-black { background-color: #ffffff !important; }
+  html:not(.dark) .bg-black\/80 { background-color: rgba(255, 255, 255, 0.88) !important; backdrop-filter: blur(12px); }
+  html:not(.dark) .bg-black\/70 { background-color: rgba(255, 255, 255, 0.92) !important; }
+  html:not(.dark) .bg-black\/60 { background-color: rgba(249, 250, 251, 0.85) !important; }
+  html:not(.dark) .bg-black\/40 { background-color: rgba(249, 250, 251, 0.7) !important; }
+  html:not(.dark) .bg-carbon { background-color: #F9FAFB !important; }
+  html:not(.dark) .ring-black { --tw-ring-color: #ffffff !important; }
+  html:not(.dark) .text-gradient-signal {
+    background: linear-gradient(90deg, #0F172A 0%, #E50914 100%) !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
 
