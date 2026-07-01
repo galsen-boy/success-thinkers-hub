@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X, Zap } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -55,6 +56,7 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <LanguageSwitcher />
+          <ThemeToggle />
           <Link
             to="/contact"
             className="inline-flex items-center rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f] transition-colors"
@@ -65,6 +67,7 @@ export function Navbar() {
 
         <div className="md:hidden flex items-center gap-2">
           <LanguageSwitcher compact />
+          <ThemeToggle />
           <button
             aria-label="Menu"
             onClick={() => setOpen((o) => !o)}
