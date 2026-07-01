@@ -50,7 +50,7 @@ function Home() {
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-md bg-[#E50914] px-6 py-3.5 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f] transition-colors">
               {t("home.hero.cta1")} <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/services" className="inline-flex items-center gap-2 rounded-md border border-border bg-black/40 px-6 py-3.5 text-sm font-semibold text-foreground hover:border-signal/60 hover:text-white transition-colors">
+            <Link to="/services" className="inline-flex items-center gap-2 rounded-md border border-border bg-black/40 px-6 py-3.5 text-sm font-semibold text-foreground hover:border-signal/60 hover:text-[#E50914] transition-colors">
               {t("home.hero.cta2")}
             </Link>
           </div>
