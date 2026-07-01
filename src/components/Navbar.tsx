@@ -67,6 +67,7 @@ export function Navbar() {
 
         <div className="md:hidden flex items-center gap-2">
           <LanguageSwitcher compact />
+          <ThemeToggle />
           <button
             aria-label="Menu"
             onClick={() => setOpen((o) => !o)}
