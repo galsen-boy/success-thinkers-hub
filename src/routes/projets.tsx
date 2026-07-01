@@ -65,6 +65,11 @@ function ProjectsPage() {
 
 function SuccessAccounting() {
   const { t } = useTranslation();
+  const isDark = useIsDark();
+  const grid = isDark ? "#222" : "#E2E8F0";
+  const axis = isDark ? "#9CA3AF" : "#475569";
+  const tooltipBg = isDark ? "#0a0a0a" : "#ffffff";
+  const tooltipText = isDark ? "#F1F5F9" : "#0F172A";
   const features = t("projects.accounting.features", { returnObjects: true }) as string[];
   const kpis = t("projects.accounting.kpis", { returnObjects: true }) as { l: string; v: string; d: string }[];
   return (
