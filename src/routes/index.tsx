@@ -19,13 +19,17 @@ function Home() {
   useDocumentMeta(t("home.meta.title"), t("home.meta.description"));
   const [tab, setTab] = useState<(typeof TAB_KEYS)[number]>("tech");
 
-  const stats = t("home.stats", { returnObjects: true }) as { value: string; label: string }[];
+  const rawStats = t("home.stats", { returnObjects: true });
+  const stats = Array.isArray(rawStats) ? rawStats : [] as { value: string; label: string }[];
   const activeTitle = t(`home.tabs.${tab}.title`);
-  const activeItems = t(`home.tabs.${tab}.items`, { returnObjects: true }) as string[];
+  const rawActiveItems = t(`home.tabs.${tab}.items`, { returnObjects: true });
+  const activeItems = Array.isArray(rawActiveItems) ? rawActiveItems : [] as string[];
   const ActiveIcon = TAB_ICONS[tab];
 
-  const deciderItems = t("home.personas.deciders.items", { returnObjects: true }) as string[];
-  const techItems = t("home.personas.tech.items", { returnObjects: true }) as string[];
+  const rawDeciderItems = t("home.personas.deciders.items", { returnObjects: true });
+  const deciderItems = Array.isArray(rawDeciderItems) ? rawDeciderItems : [] as string[];
+  const rawTechItems = t("home.personas.tech.items", { returnObjects: true });
+  const techItems = Array.isArray(rawTechItems) ? rawTechItems : [] as string[];
   const deciderIcons = [Activity, BarChart3, ShieldCheck, Briefcase];
   const techIcons = [Database, Lock, Network, Cloud];
 
