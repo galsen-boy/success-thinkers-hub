@@ -1,0 +1,40 @@
+name: Build for cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build:cpanel
+
+      - name: Push to cpanel-build branch
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git checkout -B cpanel-build
+          sed -i '/^\.output$/d' .gitignore
+          git add -f .output
+          git add cpanel.js package.json .gitignore
+          git commit -m "chore: auto-build for cpanel deployment" || echo "No changes to commit"
+          git push -f origin cpanel-build
