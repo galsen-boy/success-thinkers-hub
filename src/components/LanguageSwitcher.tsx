@@ -23,7 +23,14 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
         return (
           <button
             key={lng}
-            onClick={() => i18n.changeLanguage(lng)}
+            onClick={() => {
+              i18n.changeLanguage(lng);
+              try {
+                window.localStorage.setItem("st_lang", lng);
+              } catch (e) {
+                // ignore
+              }
+            }}
             aria-pressed={active}
             className={`flex items-center gap-1.5 rounded-[5px] px-2.5 py-1 text-xs font-bold uppercase tracking-wider transition-colors ${
               active
@@ -31,7 +38,9 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <span aria-hidden className="text-sm leading-none">{FLAGS[lng]}</span>
+            <span aria-hidden className="text-sm leading-none">
+              {FLAGS[lng]}
+            </span>
             <span>{LABELS[lng]}</span>
           </button>
         );

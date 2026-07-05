@@ -4,15 +4,16 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "framer-motion";
 
 import appCss from "../styles.css?url";
 import "../i18n";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
@@ -26,7 +27,10 @@ function NotFoundComponent() {
           This resource does not exist or has been moved.
         </p>
         <div className="mt-6">
-          <Link to="/" className="inline-flex items-center justify-center rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f]">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f]"
+          >
             Back to home
           </Link>
         </div>
@@ -38,9 +42,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-black px-4">
@@ -51,12 +52,18 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-md bg-[#E50914] px-4 py-2 text-sm font-semibold text-white shadow-signal hover:bg-[#c2080f]"
           >
             Retry
           </button>
-          <a href="/" className="rounded-md border border-border bg-carbon px-4 py-2 text-sm font-medium hover:bg-muted">
+          <a
+            href="/"
+            className="rounded-md border border-border bg-carbon px-4 py-2 text-sm font-medium hover:bg-muted"
+          >
             Home
           </a>
         </div>
@@ -71,10 +78,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "SUCCESS Thinkers — Design, Build and Deploy" },
-      { name: "description", content: "Architectures d'entreprise résilientes Oracle, Microsoft & Red Hat. 100% disponibilité, 0% interruption." },
+      {
+        name: "description",
+        content:
+          "Architectures d'entreprise résilientes Oracle, Microsoft & Red Hat. Continuité d'activité et haute disponibilité.",
+      },
       { name: "author", content: "SUCCESS Thinkers" },
-      { property: "og:title", content: "SUCCESS Thinkers — Infrastructures critiques d'entreprise" },
-      { property: "og:description", content: "Conception, sécurisation et déploiement d'infrastructures critiques pour banques, télécoms et gouvernements." },
+      {
+        property: "og:title",
+        content: "SUCCESS Thinkers — Infrastructures critiques d'entreprise",
+      },
+      {
+        property: "og:description",
+        content:
+          "Conception, sécurisation et déploiement d'infrastructures critiques pour banques, télécoms et gouvernements.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -87,14 +105,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  const themeInit = `(()=>{try{var t=localStorage.getItem('st_theme');var d=t?t==='dark':true;var c=document.documentElement.classList;d?c.add('dark'):c.remove('dark');}catch(e){document.documentElement.classList.add('dark');}})();`;
+  const themeInit = `(()=>{try{var t=localStorage.getItem('st_theme');var d=t?t==='dark':false;var c=document.documentElement.classList;d?c.add('dark'):c.remove('dark');}catch(e){}})();`;
   return (
-    <html lang="fr" className="dark">
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
         <HeadContent />
+        {/* Organization JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "SUCCESS Thinkers",
+              url: "https://www.successthinkers.org",
+              email: "contact@successthinkers.org",
+              telephone: "+221774430606",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Zone Aéroport, Yoff Dakar, Sénégal",
+                addressLocality: "Dakar",
+                addressCountry: "SN",
+              },
+            }),
+          }}
+        />
       </head>
-      <body className="bg-background text-foreground">
+      <body className="bg-background text-foreground" suppressHydrationWarning>
         {children}
         <Scripts />
       </body>
@@ -102,25 +140,64 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
-function HtmlLangSync() {
-  const { i18n } = useTranslation();
-  useEffect(() => {
-    if (typeof document !== "undefined") {
-      document.documentElement.lang = i18n.resolvedLanguage || "fr";
-    }
-  }, [i18n.resolvedLanguage]);
-  return null;
-}
-
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const routerState = useRouterState();
+  const pathname = routerState.location.pathname;
+  const { i18n } = useTranslation();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const stored = window.localStorage.getItem("st_lang");
+      if (stored === "fr" || stored === "en") {
+        if (i18n.language !== stored) {
+          const timer = setTimeout(() => {
+            i18n.changeLanguage(stored);
+          }, 300);
+          return () => clearTimeout(timer);
+        }
+      } else {
+        const navLang = navigator.language.substring(0, 2);
+        const resolved = navLang === "en" ? "en" : "fr";
+        if (i18n.language !== resolved) {
+          const timer = setTimeout(() => {
+            i18n.changeLanguage(resolved);
+          }, 300);
+          return () => clearTimeout(timer);
+        }
+        try {
+          window.localStorage.setItem("st_lang", resolved);
+        } catch (e) {
+          // ignore
+        }
+      }
+    }
+  }, [i18n, router.state.isLoading]);
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = i18n.language || "fr";
+    }
+  }, [i18n.language]);
+
   return (
     <QueryClientProvider client={queryClient}>
-      <HtmlLangSync />
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1">
-          <Outlet />
+        <main className="flex-1 flex flex-col overflow-hidden">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={pathname}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              className="w-full flex-1 flex flex-col"
+            >
+              <Outlet />
+            </motion.div>
+          </AnimatePresence>
         </main>
         <Footer />
       </div>

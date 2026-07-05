@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
  */
 export function useIsDark(): boolean {
   const [isDark, setIsDark] = useState<boolean>(() => {
-    if (typeof document === "undefined") return true;
+    if (typeof document === "undefined") return false;
     return document.documentElement.classList.contains("dark");
   });
 

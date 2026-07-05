@@ -1,15 +1,28 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X, Zap } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
+import { motion } from "framer-motion";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const links = [
     { to: "/", label: t("nav.home") },
+    { to: "/techniques", label: t("nav.techniques") },
     { to: "/services", label: t("nav.services") },
     { to: "/projets", label: t("nav.projects") },
     { to: "/partenaires", label: t("nav.partners") },
@@ -17,19 +30,18 @@ export function Navbar() {
   ] as const;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-black/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-gradient-red border border-signal/40 shadow-signal">
-            <Zap className="h-4 w-4 text-white" strokeWidth={2.5} />
+    <header
+      className={`sticky top-0 z-50 border-b border-border/60 bg-black/80 backdrop-blur-xl transition-all duration-300 ${scrolled ? "h-14" : "h-16"}`}
+    >
+      <div
+        className={`mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 transition-all duration-300 ${scrolled ? "h-14" : "h-16"}`}
+      >
+        <Link to="/" className="flex flex-col items-end group leading-none select-none">
+          <span className="text-xl md:text-2xl font-black tracking-[-0.04em] text-foreground uppercase">
+            SUCCESS
           </span>
-          <span className="flex flex-col leading-tight">
-            <span className="text-sm font-bold tracking-wide text-foreground">
-              SUCCESS<span className="text-[#E50914]">.</span>Thinkers
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Design · Build · Deploy
-            </span>
+          <span className="text-xs md:text-sm font-extrabold text-foreground tracking-wide mt-[2px] pr-[1px]">
+            Thinkers
           </span>
         </Link>
 
@@ -46,7 +58,11 @@ export function Navbar() {
                 <>
                   {l.label}
                   {isActive && (
-                    <span className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-[#E50914] rounded-full" />
+                    <motion.span
+                      layoutId="navbarActiveUnderline"
+                      className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-[#E50914] rounded-full"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
                   )}
                 </>
               )}

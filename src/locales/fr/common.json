@@ -1,40 +1,67 @@
 {
   "nav": {
     "home": "Accueil",
+    "techniques": "Techniques",
     "services": "Services",
     "projects": "Projets",
     "partners": "Partenaires",
     "contact": "Contact",
-    "audit": "Audit gratuit"
+    "audit": "Diagnostic gratuit"
   },
-  "language": { "switch": "Langue", "en": "English", "fr": "Français" },
+  "language": {
+    "switch": "Langue",
+    "en": "English",
+    "fr": "Français"
+  },
   "footer": {
-    "tagline": "Architectures d'entreprise durables et résilientes — Oracle, Microsoft & Red Hat. Pour les banques, télécoms, gouvernements et grandes corporations BTP / Énergie.",
+    "tagline": "SUCCESS Thinkers accompagne les banques, administrations, opérateurs télécoms, fintechs et grandes entreprises grâce à une expertise construite autour des technologies Oracle, Microsoft et Red Hat.",
     "navigation": "Navigation",
     "contact": "Contact",
-    "address": "Ouest foire lot 12805, Yoff, Dakar",
+    "address": "Zone Aéroport, Yoff Dakar, Sénégal",
     "rights": "Tous droits réservés.",
     "ceo": "Pape DIENG — Directeur Général & Fondateur · Oracle IT Consultant Expert",
     "slogan": "Design, build and deploy"
   },
+  "newsletter": {
+    "title": "Restez informé de nos avancées technologiques.",
+    "subtitle": "Recevez nos analyses techniques et actualités sur la continuité d'activité.",
+    "emailPlaceholder": "Votre adresse email professionnelle",
+    "btn": "Recevoir",
+    "toastOpening": "Ouverture de votre client de messagerie pour confirmation..."
+  },
+  "social": {
+    "title": "Réseaux sociaux"
+  },
   "home": {
     "meta": {
-      "title": "SUCCESS Thinkers — 100% Disponibilité, 0% Interruption",
-      "description": "Architectures critiques Oracle, Microsoft & Red Hat pour banques, télécoms et gouvernements."
+      "title": "SUCCESS Thinkers — Haute disponibilité & Continuité d'activité",
+      "description": "SUCCESS Thinkers est une entreprise spécialisée dans les technologies Oracle, Microsoft, Red Hat ainsi que dans le développement de logiciels web et d'applications mobiles multiplateformes."
     },
     "hero": {
       "badge": "Infrastructure critique",
-      "title1": "100% DISPONIBILITÉ.",
-      "title2": "0% INTERRUPTION.",
-      "subtitle": "La certitude opérationnelle pour vos infrastructures critiques. SUCCESS Thinkers conçoit, sécurise et déploie des architectures d'entreprise durables et résilientes basées sur Oracle, Microsoft et Red Hat.",
-      "cta1": "Demander un audit gratuit",
-      "cta2": "Découvrir notre plateforme"
+      "title1": "HAUTE DISPONIBILITÉ.",
+      "title2": "ARCHITECTURES CONÇUES POUR LA CONTINUITÉ D’ACTIVITÉ.",
+      "subtitle": "SUCCESS Thinkers est une entreprise spécialisée dans les technologies Oracle, Microsoft, Red Hat ainsi que dans le développement de logiciels web et d'applications mobiles multiplateformes.\n\nNous accompagnons les organisations dans la mise en place de solutions de prise de décision, de défense des systèmes d'information, de stockage haute disponibilité, d'intelligence artificielle, de machine learning et de surveillance des infrastructures critiques.\n\nNous investissons également dans la recherche et le développement de solutions socio-professionnelles afin de contribuer au développement socio-économique de l'Afrique.",
+      "cta1": "Demander un diagnostic initial",
+      "cta2": "Parler à un ingénieur"
     },
     "stats": [
-      { "value": "15+", "label": "Années d'expertise Oracle" },
-      { "value": "50+", "label": "Projets délivrés" },
-      { "value": "09", "label": "Secteurs critiques" },
-      { "value": "24/7", "label": "Disponibilité" }
+      {
+        "value": "15+",
+        "label": "Années d'expertise Oracle"
+      },
+      {
+        "value": "50+",
+        "label": "Projets délivrés"
+      },
+      {
+        "value": "06",
+        "label": "Secteurs critiques"
+      },
+      {
+        "value": "24/7",
+        "label": "Supervision proactive"
+      }
     ],
     "tabs": {
       "eyebrow": "Politique & Compétences",
@@ -50,13 +77,14 @@
         ]
       },
       "partners": {
-        "title": "Partenariats",
+        "title": "Secteurs d'activité",
         "items": [
-          "Banques & institutions financières",
-          "Opérateurs Télécoms",
-          "Réseaux sociaux & plateformes",
-          "Mobile Money & transfert d'argent",
-          "BTP, Énergie & services publics"
+          "Banques & Services Financiers",
+          "Télécommunications",
+          "Gouvernement & Secteur Public",
+          "Mobile Money",
+          "Fintech",
+          "Grandes entreprises"
         ]
       },
       "sec": {
@@ -90,7 +118,7 @@
         "items": [
           "Réduction structurelle des coûts d'exploitation IT",
           "Tableaux de bord Oracle Analytics & Power BI temps réel",
-          "Conformité OHADA et reporting réglementaire",
+          "Conformité réglementaire et rapports décisionnels",
           "ROI mesurable dès le premier exercice"
         ]
       },
@@ -106,14 +134,42 @@
       }
     },
     "ctaBand": {
-      "title": "Sécurisez vos opérations critiques en moins de 30 jours.",
-      "subtitle": "Un audit gratuit conduit par nos ingénieurs Oracle certifiés. Diagnostic, plan d'action et roadmap.",
-      "btn": "Planifier l'audit"
+      "title": "Sécurisez vos opérations critiques.",
+      "subtitle": "Un diagnostic initial conduit par nos ingénieurs certifiés. Diagnostic, plan d'action et roadmap.",
+      "btn": "Planifier un diagnostic"
+    }
+  },
+  "techniques": {
+    "meta": {
+      "title": "Expertise Technique — SUCCESS Thinkers",
+      "description": "Notre expertise technique autour d'Oracle, Microsoft, Red Hat et DevOps."
+    },
+    "hero": {
+      "eyebrow": "Techniques",
+      "title1": "Expertise technologique.",
+      "title2": "Infrastructures et DevOps.",
+      "subtitle": "Nous concevons et administrons des plateformes critiques basées sur des solutions d'entreprise de premier plan."
+    },
+    "oracle": {
+      "title": "Oracle Technology Stack",
+      "desc": "Conception, déploiement et administration de plateformes Oracle critiques pour la haute disponibilité, le stockage, l’analytique, l’intégration de données et la continuité d’activité."
+    },
+    "microsoft": {
+      "title": "Microsoft Enterprise Ecosystem",
+      "desc": "Gestion des données, décisionnel, identité et infrastructures Microsoft pour les environnements d’entreprise."
+    },
+    "redhat": {
+      "title": "Red Hat Infrastructure",
+      "desc": "Infrastructure Linux, virtualisation et environnements critiques pour les déploiements fiables et évolutifs."
+    },
+    "devops": {
+      "title": "DevOps & Automatisation",
+      "desc": "Industrialisation du développement logiciel, amélioration des cycles de livraison et automatisation des déploiements."
     }
   },
   "services": {
     "meta": {
-      "title": "Services — SUCCESS Thinkers",
+      "title": "Services & Compétences — SUCCESS Thinkers",
       "description": "Management, gouvernance IT, sécurité et R&D. Stack Oracle, Microsoft et plateformes applicatives."
     },
     "hero": {
@@ -126,44 +182,101 @@
       {
         "title": "Management des entreprises",
         "items": [
-          "Pilotage des politiques et gouvernance",
-          "Comptabilité OHADA",
-          "Gestion de projets Agile & ITIL",
+          "Pilotage de la politique des entreprises",
+          "Finance et comptabilité des organisations",
+          "Gestion de projets",
           "Conduite du changement",
-          "Mise en œuvre ERP"
+          "Gestion et surveillance des SI avec ITIL",
+          "Respect des normes ISO",
+          "Gestion des relations clients",
+          "Supply Chain et management",
+          "Prise de décision des entreprises",
+          "Unification des modules de gestion — ERP Oracle",
+          "Gestion électronique de documents",
+          "Maîtrise des processus d’entreprises"
         ]
       },
       {
         "title": "Gouvernance des systèmes informatiques",
         "items": [
-          "Design et construction de Datacenter",
-          "Administration de bases de données",
-          "Fédération d'API",
-          "Migrations et upgrade",
-          "Virtualisation & bare metal"
+          "Définir les référentiels d’entreprises",
+          "Gestion des bases de données",
+          "Exploitation des données des entreprises",
+          "Intégration de données B2B ou B2C",
+          "Fédération de services API et échange de données",
+          "Migration de données des systèmes informatiques",
+          "Connexion des applications aux infrastructures",
+          "Gestion et maintenance de version des applications",
+          "Design et conception de modèles de business",
+          "Solution progiciel d’entreprise Oracle ERP",
+          "Surveillance et correction des incidents SI",
+          "Virtualisation et bare metal de serveurs",
+          "Gestion et monitoring des machines virtuelles"
         ]
       },
       {
         "title": "Sécurité des systèmes",
         "items": [
-          "Oracle SGD, AD / LDAP & fédération",
-          "Certificats SSL / TLS, SSO",
-          "DMZ, firewalls, segmentation",
-          "Dimensionnement bande passante",
-          "Audits & remédiation"
+          "Défense des systèmes informatiques",
+          "Règles de gestion des ressources IT",
+          "Protection de la vie privée des employés",
+          "Configuration de certificats de sécurité",
+          "Contrôle d’accès aux applications",
+          "Sécurisation du trafic internet-intranet",
+          "Intégration des systèmes AD et SGD",
+          "Configuration du Single Sign-On",
+          "Dimensionnement de la bande passante",
+          "Configuration des firewalls de sécurité",
+          "Haute disponibilité des authentifications",
+          "Définition de zones démilitarisées DMZ"
         ]
       },
       {
         "title": "Recherche et développement",
         "items": [
-          "Applications web & mobile sur mesure",
-          "Big Data NoSQL",
-          "Optimisation de performance",
-          "Architecture micro-services",
-          "Intégration continue / DevOps"
+          "Innovation de projets socio-professionnels",
+          "Conception de plateformes et de sites web",
+          "Maîtrise des méthodes de gestion de projets",
+          "Utilisation des technologies web et frameworks",
+          "Maîtrise des langages de développement logiciel",
+          "Conception et modélisation d’applications",
+          "Implémentation de solutions Big Data NoSQL",
+          "Sécurité des applications déployées",
+          "Accompagnement de startups",
+          "Conception d’applications mobiles multiplateformes",
+          "Évolution de versions des applications d’entreprises",
+          "Optimisation et performance des applications"
         ]
       }
     ],
+    "methodology": {
+      "eyebrow": "Gouvernance & Méthodologie",
+      "title": "Notre approche méthodologique",
+      "subtitle": "Un cycle d'ingénierie rigoureux aligné sur les meilleures pratiques ITIL et les normes ISO.",
+      "steps": [
+        {
+          "name": "Assessment",
+          "desc": "Évaluation initiale des infrastructures, audits de sécurité et analyse des écarts."
+        },
+        {
+          "name": "Architecture",
+          "desc": "Conception détaillée des solutions haute disponibilité et plans de continuité d'activité."
+        },
+        {
+          "name": "Implementation",
+          "desc": "Déploiement, migration de données et intégration système selon des protocoles stricts."
+        },
+        {
+          "name": "Operations",
+          "desc": "Supervision proactive 24/7, gestion des incidents et administration récurrente."
+        },
+        {
+          "name": "Continuous Improvement",
+          "desc": "Optimisation des performances, durcissement continu de la sécurité et mises à jour."
+        }
+      ],
+      "note": "Note : Nos diagnostics et architectures s'appuient sur les référentiels méthodologiques ITIL et ISO pour garantir la rigueur et la conformité de vos systèmes sans se prévaloir d'une certification officielle de SUCCESS Thinkers."
+    },
     "stack": {
       "eyebrow": "Stack technique",
       "title": "Trois piliers technologiques maîtrisés.",
@@ -204,43 +317,60 @@
   },
   "projects": {
     "meta": {
-      "title": "Projets — SUCCESS Thinkers",
+      "title": "Projets & Innovations — SUCCESS Thinkers",
       "description": "Success Accounting, Success Workers, Success Printing : nos produits propriétaires."
     },
     "hero": {
-      "eyebrow": "Projets propriétaires",
-      "title1": "Trois plateformes",
-      "title2": "conçues, sécurisées, déployées.",
-      "subtitle": "Des produits propriétaires opérationnels en production, taillés pour les enjeux africains."
+      "eyebrow": "Innovation pour le développement socio-économique de l’Afrique",
+      "title1": "Lutte contre le chômage des jeunes",
+      "title2": "par des solutions structurantes.",
+      "subtitle": "Des plateformes d'ingénierie et de services conçues pour relever les défis de l'Afrique."
     },
     "accounting": {
-      "label": "Produit · Fintech",
+      "label": "Produit · Finance",
       "name": "Success Accounting",
-      "slogan": "L'interopérabilité financière temps réel. Zéro traitement manuel.",
+      "slogan": "Solution de gestion financière et de production des états comptables destinée aux entreprises et institutions.",
       "features": [
-        "Conformité OHADA native",
-        "Transfert bidirectionnel temps réel avec les banques",
-        "Réconciliation bancaire automatisée",
-        "Audit trail complet et signatures cryptographiques"
+        "Optimisation financière",
+        "Pilotage de la performance",
+        "Production des états financiers",
+        "Processus comptables"
       ],
       "dashboard": "Tableau de bord financier",
       "period": "Q2 — Exercice en cours",
       "kpis": [
-        { "l": "Transactions", "v": "32 900", "d": "+12,4%" },
-        { "l": "Solde consolidé", "v": "17,9 M$", "d": "+8,1%" },
-        { "l": "Écarts détectés", "v": "15", "d": "-67%" }
+        {
+          "l": "Transactions",
+          "v": "32 900",
+          "d": "+12,4%"
+        },
+        {
+          "l": "Solde consolidé",
+          "v": "17,9 M$",
+          "d": "+8,1%"
+        },
+        {
+          "l": "Écarts détectés",
+          "v": "15",
+          "d": "-67%"
+        }
       ],
-      "series": { "tx": "Transactions", "balance": "Solde (k$)", "gap": "Écarts" }
+      "series": {
+        "tx": "Transactions",
+        "balance": "Solde (k$)",
+        "gap": "Écarts"
+      }
     },
     "workers": {
-      "label": "Produit · BTP",
+      "label": "Produit · Recrutement & Chantiers",
       "name": "Success Workers",
-      "slogan": "Optimiser le capital humain opérationnel sur vos chantiers BTP.",
+      "slogan": "Plateforme de recrutement et d’optimisation de la gestion des chantiers et des ressources humaines.",
       "features": [
-        "Suivi temps réel des chantiers",
-        "Mise en relation géolocalisée des ouvriers",
-        "Lutte contre le chômage des jeunes au Sénégal",
-        "Monétisation via taxe transactionnelle"
+        "Lutte contre le chômage des jeunes en Afrique",
+        "Employabilité",
+        "Gestion des effectifs",
+        "Suivi des chantiers",
+        "Transformation digitale"
       ],
       "mapTitle": "Carte opérationnelle — Sénégal",
       "summary": "{{sites}} chantiers · {{workers}} ouvriers actifs",
@@ -252,14 +382,15 @@
       "siteProductivity": "Productivité"
     },
     "printing": {
-      "label": "Produit · Sécurité privée",
+      "label": "Produit · Sécurité",
       "name": "Success Printing",
-      "slogan": "Sécurité privée : traçabilité biométrique et réactivité d'urgence.",
+      "slogan": "Solution de digitalisation des systèmes d’émargement, de géolocalisation et de suivi des agents.",
       "features": [
-        "Pointage biométrique automatisé (empreintes)",
-        "Géolocalisation temps réel des agents",
-        "Alertes anti-cambriolage instantanées",
-        "Versement des salaires via Mobile Money"
+        "Sécurité",
+        "Traçabilité",
+        "Gestion opérationnelle",
+        "Géolocalisation",
+        "Suivi des agents"
       ],
       "console": "Console superviseur",
       "agents": "5 agents · zone Dakar",
@@ -268,36 +399,54 @@
       "statusActive": "Actif",
       "statusPatrol": "En patrouille",
       "statusIncident": "Incident",
-      "alertMsg": "Alerte cambriolage déclenchée — équipes d'intervention notifiées."
+      "alertMsg": "Alerte déclenchée — équipes d'intervention notifiées."
     }
   },
   "partners": {
     "meta": {
-      "title": "Partenaires & Organisation — SUCCESS Thinkers",
-      "description": "Notre organigramme, nos partenariats Oracle, IBM, DELL, HP."
+      "title": "Écosystème & Organisation — SUCCESS Thinkers",
+      "description": "Notre écosystème technologique et notre structure organisationnelle."
     },
     "hero": {
-      "eyebrow": "Partenaires & Organisation",
-      "title1": "Des partenariats bâtis",
-      "title2": "sur la confiance et l'expertise."
+      "eyebrow": "Écosystème",
+      "title1": "Notre écosystème technologique",
+      "title2": "et matériel maîtrisé."
     },
     "org": {
       "title": "Organigramme du Groupe SUCCESS Thinkers",
       "subtitle": "Cliquez sur un département pour explorer sa composition.",
       "ceoRole": "Directeur Général & Fondateur",
       "nodes": [
-        { "name": "Secrétariat & Accueil", "role": "5 personnel" },
-        { "name": "Conseil Exécutif", "role": "6 membres" },
-        { "name": "Direction Technique", "role": "50+ ingénieurs IT" },
-        { "name": "Direction RH & Gestion", "role": "10+ collaborateurs" },
-        { "name": "Direction Commerciale & Marketing", "role": "5 collaborateurs" },
-        { "name": "Direction Finance & Comptabilité (DFC)", "role": "7 collaborateurs" }
+        {
+          "name": "Secrétariat & Accueil",
+          "role": "5 personnel"
+        },
+        {
+          "name": "Conseil Exécutif",
+          "role": "6 membres"
+        },
+        {
+          "name": "Direction Technique",
+          "role": "50+ ingénieurs IT"
+        },
+        {
+          "name": "Direction RH & Gestion",
+          "role": "10+ collaborateurs"
+        },
+        {
+          "name": "Direction Commerciale & Marketing",
+          "role": "5 collaborateurs"
+        },
+        {
+          "name": "Direction Finance & Comptabilité (DFC)",
+          "role": "7 collaborateurs"
+        }
       ]
     },
     "appliances": {
-      "eyebrow": "Catalogue Hardware",
-      "title": "Oracle Appliances commercialisés",
-      "subtitle": "Solutions matérielles certifiées, livrées et maintenues par SUCCESS Thinkers.",
+      "eyebrow": "Catalogue Matériel",
+      "title": "Écosystème de serveurs & stockage",
+      "subtitle": "Infrastructures et solutions matérielles maîtrisées par nos équipes.",
       "items": [
         {
           "name": "Exadata Database Machine",
@@ -305,33 +454,34 @@
           "desc": "Performance extrême pour bases Oracle critiques. Idéale pour datawarehouses et OLTP intensifs."
         },
         {
-          "name": "Oracle Database Appliance — ODA X7-HA",
+          "name": "Oracle Database Appliance ODA",
           "tagline": "Multi-nœud abordable",
-          "desc": "Serveur bancaire haut de gamme pour PME/ETI. Architecture multi-nœud à coût maîtrisé."
+          "desc": "Serveur bancaire d'infrastructure pour PME/ETI. Architecture multi-nœud à coût maîtrisé."
         },
         {
-          "name": "Oracle MiniCluster S7-2",
-          "tagline": "Processeur sécurité PCI-DSS / STIG",
-          "desc": "Conçu pour paiements et Mobile Money. Conformité réglementaire native au niveau du silicium."
+          "name": "Oracle MiniCluster",
+          "tagline": "Sécurité PCI-DSS / STIG",
+          "desc": "Conçu pour paiements et Mobile Money. Conformité réglementaire native au niveau de silicium."
         }
       ],
-      "hwPartnersTitle": "Partenariats commerciaux complémentaires",
-      "hwPartnersSub": "Serveurs et infrastructures certifiés par nos équipes."
+      "hwPartnersTitle": "Écosystème matériel complémentaire",
+      "hwPartnersSub": "Solutions serveurs et infrastructures matérielles maîtrisées par nos équipes.",
+      "hwEcosystemTitle": "Écosystème technologique"
     }
   },
   "contact": {
     "meta": {
-      "title": "Contact — SUCCESS Thinkers",
-      "description": "Demandez un audit gratuit. Ouest Foire, Yoff, Dakar — Sénégal."
+      "title": "Contact & Diagnostic — SUCCESS Thinkers",
+      "description": "Demandez un diagnostic initial ou parlez à un ingénieur pour vos infrastructures critiques."
     },
     "hero": {
       "eyebrow": "Contact",
-      "title1": "Parlons de votre",
-      "title2": "infrastructure critique.",
-      "subtitle": "Audit gratuit conduit par nos ingénieurs Oracle certifiés. Réponse sous 24h ouvrées."
+      "title1": "Demander un",
+      "title2": "diagnostic initial.",
+      "subtitle": "Parlez à un ingénieur pour sécuriser vos opérations critiques. Réponse sous 24h ouvrées."
     },
     "form": {
-      "title": "Formulaire de demande",
+      "title": "Formulaire de contact",
       "firstName": "Prénom",
       "lastName": "Nom",
       "email": "Email professionnel",
@@ -342,30 +492,39 @@
       "infraPlaceholder": "Ex : Oracle RAC, datacenter on-prem, hybrid OCI…",
       "message": "Message",
       "messagePlaceholder": "Décrivez votre besoin, vos contraintes et vos délais.",
-      "submit": "Envoyer la demande",
-      "sentTitle": "Demande transmise",
-      "sentBody": "Merci. Un consultant prendra contact avec vous sous 24h ouvrées.",
-      "again": "Envoyer une autre demande",
-      "sectors": ["Banque / Fintech", "Télécoms", "Secteur Public", "BTP", "Énergie"],
+      "submit": "Parler à un ingénieur",
+      "sentTitle": "Demande préparée",
+      "sentBody": "Votre demande a été générée. Veuillez cliquer sur le bouton ci-dessous pour l'envoyer via votre client de messagerie local.",
+      "again": "Recommencer la saisie",
+      "sectors": [
+        "Banques & Services Financiers",
+        "Télécommunications",
+        "Gouvernement & Secteur Public",
+        "Mobile Money",
+        "Fintech",
+        "Grandes entreprises",
+        "Autres"
+      ],
       "errors": {
         "firstName": "Prénom requis",
         "lastName": "Nom requis",
-        "email": "Email invalide",
+        "email": "Email professionnel invalide",
         "company": "Entreprise requise",
-        "sector": "Secteur requis",
+        "sector": "Secteur d'activité requis",
         "infra": "Type d'infrastructure requis",
-        "message": "Message trop court"
+        "message": "Message trop court (min. 10 caractères)"
       }
     },
     "info": {
       "email": "Email",
-      "phone": "Téléphone",
-      "address": "Adresse",
-      "addressValue": "Ouest foire lot 12805, côté Banque Agricole, Yoff Dakar, Sénégal",
+      "phone": "Téléphone & WhatsApp",
+      "address": "Siège général",
+      "addressValue": "Zone Aéroport, Yoff Dakar, Sénégal",
       "hours": "Horaires",
       "hoursValue": "Lun — Ven · 08h30 – 18h00 (GMT)",
-      "office": "Bureau principal — Yoff",
-      "openMap": "Ouvrir la carte"
+      "office": "Bureau principal — Dakar",
+      "openMap": "Ouvrir la carte",
+      "whatsappLabel": "Parler à un ingénieur"
     }
   }
 }
